@@ -165,3 +165,16 @@ grid-template-columns: repeat(auto, auto)     !important ;
 .closebtn:hover {
   color: black;
 }
+
+a:link, a:visited {
+  color: black;
+  text-decoration: none;
+}
+a:hover {
+    color: orange;
+}
+
+#loglink:link, #loglink:visited {
+    color:white;
+    text-decoration: none;
+}

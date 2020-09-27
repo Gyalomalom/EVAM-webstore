@@ -2,36 +2,12 @@
 <html>
 <head>
     <title>This is the title</title>
-<link rel="stylesheet" type="text/css" href="Style.css">
+<link rel="stylesheet" type="text/css" href="Styles/Style.css">
 </head>
 <body>
-    <div class = LoginBar>
-        <div class = LBitem><a href = "login.html">Log in</a></div>
-            <div class = LBitem><a href = "register.html">Create account</a></div>
-        <div class = LBitem>Cart</div>
-    </div>
+    <?php include 'Login-bar.php'?>
     <div class = logo><a href = "index.html">This is a logo</a></div>
-    <div class = NavBar id = NB1>
-        <div class = NBitem>
-            <div class = dropdown>
-                <span>Collections</span>
-                <div class="dropdown-content">
-                    <p>
-                    Basic
-                    </p>
-                    <p>
-                    <a href = "Collection-genome.html">Genome</a>
-                    </p>
-                    <p>
-                    Limited
-                    </p>
-                </div>
-            </div>
-        </div>
-        <div class = NBitem>Mission</div>
-        <div class = NBitem>About us</div>
-        <div class = NBitem>Contact</div>
-    </div>
+    <?php include 'NavBar.html'; ?>
     <div class = banner>
     <img src = "Images/placeholder%208x2.5.png" id = ban1>
     </div>

@@ -25,6 +25,7 @@ $user2->set_pass(["Nyalomalom"]);
 <html>
     <head><link rel="stylesheet" type="text/css" href="../Styles/Style.css"></head>
     <body>
+        <?php include 'Login-bar.php'; ?>
         <div class = "alert">
         <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
         <?php
@@ -46,7 +47,7 @@ $user2->set_pass(["Nyalomalom"]);
 
                 }
         ?>
-        <form action="../Collection-genome-loggedin.html">
+        <form action="../Collection-genome.php">
         <input type="submit" value="Click here to go back to browsing." />
         </form>
         </div>

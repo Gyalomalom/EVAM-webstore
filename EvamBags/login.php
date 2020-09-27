@@ -1,36 +1,12 @@
 <html>
 <head>
     <title>This is the title</title>
-<link rel="stylesheet" type="text/css" href="Style.css">
+<link rel="stylesheet" type="text/css" href="Styles/Style.css">
 </head>
 <body>
-    <div class = LoginBar>
-        <div class = LBitem>Log in</div>
-        <div class = LBitem>Create account</div>
-        <div class = LBitem>Cart</div>
-    </div>
-    <div class = logo><a href = "index.html">This is a logo</a></div>
-    <div class = NavBar id = NB1>
-        <div class = NBitem>
-            <div class = dropdown>
-                <span>Collections</span>
-                <div class="dropdown-content">
-                    <p>
-                    Basic
-                    </p>
-                    <p>
-                    <a href = "Collection-genome.html">Genome</a>
-                    </p>
-                    <p>
-                    Limited
-                    </p>
-                </div>
-            </div>
-        </div>
-        <div class = NBitem>Mission</div>
-        <div class = NBitem>About us</div>
-        <div class = NBitem>Contact</div>
-    </div>
+    <?php include 'Login-bar.php'?>
+    <div class = logo><a href = "index.php">This is a logo</a></div>
+    <?php include 'NavBar.html'; ?>
 <form action="Handlers/login.php" method="post">
 
 	<div class="container">
@@ -48,7 +24,7 @@
 
 	<div class="container" style="background-color:#f1f1f1">
     <button type="button" class="cancelbtn">Cancel</button>
-    <span class="psw">Forgot <a href="#">password?</a></span>
+    <span class="psw"><a href="#">Forgot password?</a></span>
 	</div>
 </form>
     <div class = imageparagraph id = p3>
