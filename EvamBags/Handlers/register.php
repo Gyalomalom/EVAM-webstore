@@ -1,48 +1,26 @@
-
-
 <?php
+require_once('../Classes/User.php');
 
-class User {
-  private $email;
-  private $firstname;
-  private $lastname;
-  private $password;
-  
-  function set_firstname($firstname) {
-    $this->firstname = $firstname;
-  }
-  function set_lastname($lastname) {
-    $this->lastname = $lastname;
-  }
-  function set_email($email) {
-    $this->email = $email;
-  }
-  function set_pass($password) {
-    $this->password = $password;
-  }
-  function get_firstname() {
-    return $this->firstname;
-  }
-  function get_lastname() {
-    return $this->lastname;
-  }
-  function get_email() {
-    return $this->email;
-  }
-  function get_pass() {
-    return $this->password;
-  }
-}
+
 $user = new User();
-$user->set_firstname($_GET["firstmame"]);
-$user->set_lastname($_GET["lastname"]);
-$user->set_email($_GET["email"])
-$user->set_pass($_GET["password"]
-
-
-
+$user->set_firstname($_POST["firstname"]);
+$user->set_lastname($_POST["lastname"]);
+$user->set_email($_POST["email"]);
+$user->set_pass($_POST["password"]);          
 ?>
 
-Welcome <?php echo $_GET["name"]; ?><br>
-Your email address is: <?php echo $_GET["email"]; ?>
+<html>
+<head><link rel="stylesheet" type="text/css" href="../Styles/Style.css"></head>
+<body>
+<div class="alert">
+  <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+  Welcome <?php echo $user->get_firstname(); ?><br>
+  Your email address is: <?php echo $user->get_email(); ?>
+    <form action="../Collection-genome-loggedin.html">
+        <input type="submit" value="Click here to go back to browsing." />
+    </form>
+</div>
+
+</body>
+</html>
 
