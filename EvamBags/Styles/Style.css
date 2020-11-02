@@ -47,6 +47,10 @@ body{
 #p2{
     grid-template-columns: 80% 20%;
 }
+#logo{
+	width: 2%;
+	padding:10px;
+}
 .text{
     width: auto;
     height: auto;

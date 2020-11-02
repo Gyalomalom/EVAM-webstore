@@ -6,31 +6,33 @@
 </head>
 <body>
     <?php include 'Login-bar.php'?>
-    <div class = logo><a href = "index.html">This is a logo</a></div>
+    <div class = logo><a href = "index.php"><img src = "Images/favatya 7x7.jpg" id = "logo"></a></div>
     <?php include 'NavBar.html'; ?>
     <div class = banner>
     <img src = "Images/placeholder%208x2.5.png" id = ban1>
     </div>
     <div class = index-wrapper>
         <div class = imageparagraph id = p1>
-            <div class = inlinePic><img src = "Images/placeholder%207x7.png" id = pi1></div>
-            <div class = text><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum condimentum magna id odio ultricies tempus. Aenean interdum vehicula auctor. Cras sit amet odio dictum, tristique magna eu, tristique augue. Ut facilisis, nunc non vehicula euismod, nibh magna sollicitudin massa, non tincidunt ligula lacus a nibh. Nulla facilisi. Mauris nec erat lacus. Donec rhoncus ex urna, ac feugiat sem mollis sed. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Sed ex augue, laoreet ac pellentesque varius, euismod eget purus. Morbi viverra nunc magna, in vehicula velit bibendum a. Quisque ut ligula ultrices, fermentum tortor sed, egestas turpis. Pellentesque auctor sapien leo, non fringilla tellus laoreet ac.</p></div>   
+            <div class = inlinePic><img src = "Images/ph%207x7.png" id = pi1></div>
+            <div class = text><p>EVAM is a Hungarian brand. We started in 2013 and after a long break, we are back in business again. In this time we decided to do our best to reform our brand as sustainable as possible. It will be a long process to become a fully enviromental friendly brand, so we need your help.Part of our mission is help you become a conscious consumer. We start this process by producing our bags in Hungary instead of outsourcing to developing countries. Read more about our mission and values here.</p></div>   
         </div>
         <div class = imageparagraph id = p2>
-            <div class = text><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum condimentum magna id odio ultricies tempus. Aenean interdum vehicula auctor. Cras sit amet odio dictum, tristique magna eu, tristique augue. Ut facilisis, nunc non vehicula euismod, nibh magna sollicitudin massa, non tincidunt ligula lacus a nibh. Nulla facilisi. Mauris nec erat lacus. Donec rhoncus ex urna, ac feugiat sem mollis sed. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Sed ex augue, laoreet ac pellentesque varius, euismod eget purus. Morbi viverra nunc magna, in vehicula velit bibendum a. Quisque ut ligula ultrices, fermentum tortor sed, egestas turpis. Pellentesque auctor sapien leo, non fringilla tellus laoreet ac.</p></div>
+            <div class = text><p>Fashion Revolution is a nonprofit global movement represented by The Fashion Revolution Foundation and Fashion Revolution CIC with teams in over 100 countries around the world. Fashion Revolution campaigns for reform of the fashion industry with a focus on the need for greater transparency in the fashion supply chain.If you buy products from our webstore, after every purcase we donate of the total price to Fashion Revolution Foundation to reform the fashion industry in developing countries.
+
+</p></div>
             <div class = inlinePic><img src = "Images/placeholder%207x7.png" id = pi2></div>
         </div>
     </div>
     <div class = imageparagraph id = p3>
-        <div class = inlinePic><img src = "Images/placeholder%207x7.png" id = pi3></div>
+        <div class = inlinePic><img src = "Images/ph1%207x7.jpg" id = pi3></div>
         <div class = text><p>
             Our studio
             <br>
-            1146
+            1064
             <br>
             Budapest
             <br>
-            Ajtósi Dürer sor 21.
+            Szondi u. 61
             <br>
             </p>
         </div>   
