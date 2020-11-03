@@ -1,3 +1,5 @@
+<?php include 'session.php'?>
+<?php include_once 'Includes/dbh.inc.php'?>
 <html>
 <head>
     <title>This is the title</title>
@@ -5,7 +7,6 @@
 </head>
 <body>
     <?php include 'Login-bar.php'?>
-    <div class = logo><a href = "index.php">This is a logo</a></div>
     <?php include 'NavBar.html'; ?>
 <form action="Handlers/login.php" method="post">
 
@@ -27,20 +28,7 @@
     <span class="psw"><a href="#">Forgot password?</a></span>
 	</div>
 </form>
-    <div class = imageparagraph id = p3>
-        <div class = inlinePic><img src = "Images/placeholder%207x7.png" id = pi3></div>
-        <div class = text><p>
-            Our studio
-            <br>
-            1146
-            <br>
-            Budapest
-            <br>
-            Ajtosi Durer sor 21.
-            <br>
-            </p>
-        </div>   
-    </div>
+    <?php include 'ContactInfo.php'?>
 </body>
 <footer>HTML and CSS for website written by Aleksandar Nasev and David Horvath.</footer>
 </html>

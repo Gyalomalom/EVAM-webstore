@@ -1,3 +1,4 @@
+<?php include 'session.php'?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -6,7 +7,6 @@
 </head>
 <body>
     <?php include 'Login-bar.php'?>
-    <div class = logo><a href = "index.php"><img src = "Images/favatya 7x7.jpg" id = "logo"></a></div>
     <?php include 'NavBar.html'; ?>
     <div class = banner>
     <img src = "Images/placeholder%208x2.5.png" id = ban1>
@@ -23,20 +23,7 @@
             <div class = inlinePic><img src = "Images/placeholder%207x7.png" id = pi2></div>
         </div>
     </div>
-    <div class = imageparagraph id = p3>
-        <div class = inlinePic><img src = "Images/ph1%207x7.jpg" id = pi3></div>
-        <div class = text><p>
-            Our studio
-            <br>
-            1064
-            <br>
-            Budapest
-            <br>
-            Szondi u. 61
-            <br>
-            </p>
-        </div>   
-    </div>
+<?php include 'ContactInfo.php'?>
 </body>
 <footer>HTML and CSS for website written by Aleksandar Nasev and David Horvath.</footer>
 </html>

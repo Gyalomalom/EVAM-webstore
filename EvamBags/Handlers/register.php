@@ -1,6 +1,6 @@
 <?php
 require_once('../Classes/User.php');
-
+include_once ('../Includes/dbh.inc.php');
 
 $nameErr = "";
 $emailErr = "";
@@ -11,6 +11,11 @@ else if (!filter_var($_POST['email'], FILTER_VALIDATE_EMAIL)) {
   $emailErr = "Invalid email format. Please enter a valid email.";
 }
       
+?>
+
+<?php
+$sql = "INSERT INTO users (email, firstname, lastname, pass) VALUES ()";
+$result = mysqli_query($conn, $sql);
 ?>
 
 <html>
@@ -35,7 +40,7 @@ else if (!filter_var($_POST['email'], FILTER_VALIDATE_EMAIL)) {
                     $user->set_firstname($_POST["firstname"]);
                     $user->set_lastname($_POST["lastname"]);
                     $user->set_email($_POST["email"]);
-                    $user->set_pass($_POST["password"]);    
+                    $user->set_pass($_POST["password"]);
                     echo "Welcome" . " " . $user->get_firstname() . " " . $user->get_lastname(). ", you've successfully completed your registration!";
                 }
 ?>

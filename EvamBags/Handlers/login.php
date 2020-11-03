@@ -1,51 +1,50 @@
 <?php
 
 require_once('../Classes/User.php');
+include_once ('../Includes/dbh.inc.php');
 
-$user = new User();
-$user->set_firstname("John");
-$user->set_lastname("Doe");
-$user->set_email("johndoe@gmail.com");
-$user->set_pass("WhoamI88");
+$sql = "SELECT * FROM users;";
+$result = mysqli_query($conn, $sql);
+$resultCheck = mysqli_num_rows ($result);
 
-$user1 = new User();
-$user1->set_firstname(["Miranada"]);
-$user1->set_lastname(["Keyes"]);
-$user1->set_email(["mkeyes@gmail.com"]);
-$user1->set_pass(["WeJustGettinStarted"]);
+$hasMatch = 0;
 
-$user2 = new User();
-$user2->set_firstname(["Mazo"]);
-$user2->set_lastname(["Chris"]);
-$user2->set_email(["kriszomazo@gmail.com"]);
-$user2->set_pass(["Nyalomalom"]);
 
 
 ?>
 <html>
     <head><link rel="stylesheet" type="text/css" href="../Styles/Style.css"></head>
     <body>
-        <?php include 'Login-bar.php'; ?>
+        <?php include '../Logout-Cart-bar.php'; ?>
         <div class = "alert">
         <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
         <?php
-                if (($user->get_email()==($_POST['username'])) and ($user->get_pass()==($_POST['password'])))
+            if ($resultCheck > 0){
+                while($row = mysqli_fetch_assoc($result))
                 {
-                    echo "Welcome" . " " . $user->get_firstname() . " " . $user->get_lastname(). "!";
+                    $user = new User();
+                    $user->set_firstname($row['firstname']);
+                    $user->set_lastname($row['lastname']);
+                    $user->set_email($row['email']);
+                    $user->set_pass($row['pass']);
+                    
+                    if (($user->get_email()==($_POST['username'])) and ($user->get_pass()==($_POST['password'])))
+                    {
+                        echo "Welcome" . " " . $user->get_firstname() . " " . $user->get_lastname(). "!";
+                        $_SESSION['userid'] = $row['email'];
+                        $hasMatch = 1;
+                    }
+                    elseif (($user->get_email()==($_POST['username'])) and !($user->get_pass()==($_POST['password'])))
+                    {
+                        echo "Please make sure you've entered the correct password.";
+                        $hasMatch = 1;
+                    }
                 }
-                elseif (($user1->get_email()==($_POST['username'])) and ($user1->get_pass()==($_POST['password'])))
-                {
-                    echo "Welcome" . " " . $user1->get_firstname() . " " . $user1->get_lastname(). "!";
+                if ($hasMatch == 0){
+                 echo "We couldn't find you in our database. Please make sure you've registered before trying to log in!";
                 }
-                elseif (($user2->get_email()==($_POST['username'])) and ($user2->get_pass()==($_POST['password'])))
-                {
-                    echo "Welcome" . " " . $user2->get_firstname() . " " . $user2->get_lastname() . "!";
-                }
-                else
-                {
-                    echo "Username or password didn't match. Please make sure the entered e-mail address and password are correct.";
-
-                }
+                
+            }
         ?>
         <form action="../Collection-genome.php">
         <input type="submit" value="Click here to go back to browsing." />

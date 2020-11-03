@@ -8,6 +8,12 @@ body{
     background-color: #F8BA37;
     width: 100%;
 }
+.LogoutBar{
+    display: inline-grid;
+    grid-template-columns: auto auto;
+    background-color: #F8BA37;
+    width: 100%;
+}
 
 .LBitem{
     padding: 13px;

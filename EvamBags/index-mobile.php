@@ -6,7 +6,6 @@
 </head>
 <body>
     <?php include 'Login-bar.php'?>
-    <div class = logo><a href = "index-mobile.php">This is a logo</a></div>
     <?php include 'NavBar.html'; ?>
     <div class = banner>
     <img src = "Images/placeholder%208x2.5.png" id = ban1>
