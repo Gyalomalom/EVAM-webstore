@@ -3,10 +3,6 @@
 require_once('../Classes/User.php');
 include_once ('../Includes/dbh.inc.php');
 
-$sql = "SELECT * FROM users;";
-$result = mysqli_query($conn, $sql);
-$resultCheck = mysqli_num_rows ($result);
-
 $hasMatch = 0;
 
 
@@ -19,32 +15,47 @@ $hasMatch = 0;
         <div class = "alert">
         <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
         <?php
-            if ($resultCheck > 0){
-                while($row = mysqli_fetch_assoc($result))
+                $sql = "SELECT * FROM users;";
+                //instantiate a new object of type prepared statement
+                $stmt = mysqli_stmt_init($conn); //uses whichever connection variable was used to connect to the db
+                //prepare the prepared statement, or rather try to parse the empty placeholder code first
+                if (!mysqli_stmt_prepare($stmt, $sql)) //good practice to check for errors with placeholder before binding values to it, but we don't inject data into the SQL statement in this block
                 {
-                    $user = new User();
-                    $user->set_firstname($row['firstname']);
-                    $user->set_lastname($row['lastname']);
-                    $user->set_email($row['email']);
-                    $user->set_pass($row['pass']);
+                   echo "SQL statement failed.";
+                }
+            
+                else
                     
-                    if (($user->get_email()==($_POST['username'])) and ($user->get_pass()==($_POST['password'])))
+                {
+                    //try and run the parameters inside the database
+                        mysqli_stmt_execute($stmt);
+                        $result = mysqli_stmt_get_result($stmt);//get the result from the query
+                    while($row = mysqli_fetch_assoc($result))
                     {
-                        echo "Welcome" . " " . $user->get_firstname() . " " . $user->get_lastname(). "!";
-                        $_SESSION['userid'] = $row['email'];
-                        $hasMatch = 1;
+                        $user = new User();
+                        $user->set_firstname($row['firstname']);
+                        $user->set_lastname($row['lastname']);
+                        $user->set_email($row['email']);
+                        $user->set_pass($row['pass']);
+
+                        if (($user->get_email()==($_POST['username'])) and ($user->get_pass()==($_POST['password'])))
+                        {
+                            echo "Welcome" . " " . $user->get_firstname() . " " . $user->get_lastname(). "!";
+                            $_SESSION['userid'] = $row['email'];
+                            $hasMatch = 1;
+                        }
+                        elseif (($user->get_email()==($_POST['username'])) and !($user->get_pass()==($_POST['password'])))
+                        {
+                            echo "Please make sure you've entered the correct password.";
+                            $hasMatch = 1;
+                        }
                     }
-                    elseif (($user->get_email()==($_POST['username'])) and !($user->get_pass()==($_POST['password'])))
-                    {
-                        echo "Please make sure you've entered the correct password.";
-                        $hasMatch = 1;
+                    
+                    if ($hasMatch == 0){
+                        echo "We couldn't find you in our database. Please make sure you've registered before trying to log in!";
                     }
-                }
-                if ($hasMatch == 0){
-                 echo "We couldn't find you in our database. Please make sure you've registered before trying to log in!";
-                }
                 
-            }
+               }
         ?>
         <form action="../Collection-genome.php">
         <input type="submit" value="Click here to go back to browsing." />
