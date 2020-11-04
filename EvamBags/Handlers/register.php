@@ -44,7 +44,7 @@ else if (!filter_var($_POST['email'], FILTER_VALIDATE_EMAIL)) {
                     
                     /*following segment of code uses prepared statements which are essential for security reasons, please don't forget to use them whenever you're parsing user inputed information as SQL statemetns*/
                     //create a template
-                    $sql = "INSERT INTO users (email, firstname, lastname, pass) VALUES (?, ?, ?, ?)";
+                    $sql = "INSERT INTO users (email, firstname, lastname, pass) VALUES (?, ?, ?, ?);";
                     //instantiate a new object of type prepared statement
                     $stmt = mysqli_stmt_init($conn); //uses whichever connection variable was used to connect to the db
                     //prepare the prepared statement, or rather try to parse the empty placeholder code first
