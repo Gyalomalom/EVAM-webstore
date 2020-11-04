@@ -25,7 +25,9 @@
 
             <button type = "submit" name = "submit">Upload file...</button>
         </form>
-    </div>    
+		<button type = "submit" name = "submit"><a href = "logout.php" id = loglink>Log out</a></div>
+    </div>  
+    	
     <?php include 'ContactInfo.php'?>
 </body>
 <footer>HTML and CSS for website written by Aleksandar Nasev and David Horvath.</footer>
