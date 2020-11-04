@@ -13,13 +13,23 @@ $fileType = $_FILES['file']['type'];
 $itemname = $_POST['itemname'];
 $iprice = $_POST['price'];
 $icol = $_POST['collection'];
+$amount = 1;    
 
 $fileExt = explode('.', $fileName);
 $fileActualExt = strtolower(end($fileExt));
 
 $allowed = array ('jpg', 'jpeg', 'png');
+?>
+<!DOCTYPE html>
+<html>
+<head><link rel="stylesheet" type="text/css" href="../Styles/Style.css"></head>
+<body>
+    <?php include '../Login-bar.php'; ?>
+<div class="alert">
+  <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
 
-if (in_array($fileActualExt, $allowed)){
+<?php
+    if (in_array($fileActualExt, $allowed)){
     if ($fileError===0){
         if ($fileSize < 10000000){
         $fileNameNew = uniqid('', true).".".$fileActualExt;
@@ -28,7 +38,7 @@ if (in_array($fileActualExt, $allowed)){
         
         /*following segment of code uses prepared statements which are essential for security reasons, please don't forget to use them whenever you're parsing user inputed information as SQL statemetns*/
                     //create a template
-                    $sql = "INSERT INTO items (itemname, price, collection, imagename) VALUES (?, ?, ?, ?);";
+                    $sql = "INSERT INTO items (itemname, price, collection, imagename, amount) VALUES (?, ?, ?, ?, ?);";
                     //instantiate a new object of type prepared statement
                     $stmt = mysqli_stmt_init($conn); //uses whichever connection variable was used to connect to the db
                     //prepare the prepared statement, or rather try to parse the empty placeholder code first
@@ -39,7 +49,7 @@ if (in_array($fileActualExt, $allowed)){
                     else
                     {
                         //bind parameters to placeholder, aka add your actual data in the 'template'
-                            mysqli_stmt_bind_param($stmt, "ssss", $itemname, $iprice, $icol, $fileNameNew); //"s" is a type indicator for string, one 'letter' is required per variable/questionmark you have in your template. For some reason only accepts variables and can't call the getters from the user class...
+                            mysqli_stmt_bind_param($stmt, "ssssi", $itemname, $iprice, $icol, $fileNameNew, $amount); //"s" is a type indicator for string, one 'letter' is required per variable/questionmark you have in your template. For some reason only accepts variables and can't call the getters from the user class...
                         //after mapping the data to our SQL statement, run the parameters inside the database
                             mysqli_stmt_execute($stmt);
                             $result = mysqli_stmt_get_result($stmt);//get the result from the query
@@ -65,3 +75,9 @@ echo "You cannot upload files of this type. Please upload a different type of fi
 
 }
 ?>
+            <form action="../Admin-upload-page.php">
+        <input type="submit" value="Click here to upload a new item." />
+        </form>
+        </div>
+    </body>
+</html>
