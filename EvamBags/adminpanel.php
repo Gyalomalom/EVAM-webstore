@@ -1,4 +1,4 @@
-<?php include 'session.php'?>
+<?php include 'sessionadmin.php'?>
 <?php include_once 'Includes/dbh.inc.php'?>
 <!DOCTYPE html>
 <html>

@@ -1,3 +1,4 @@
+<?php session_start();?>
 <?php
 
 require_once('../Classes/User.php');
@@ -40,9 +41,11 @@ $hasMatch = 0;
 
                         if (($user->get_email()==($_POST['username'])) and ($user->get_pass()==($_POST['password'])))
                         {
-                            echo "Welcome" . " " . $user->get_firstname() . " " . $user->get_lastname(). "!";
+                            
                             $_SESSION['userid'] = $row['email'];
                             $hasMatch = 1;
+							header("Location: ../adminpanel.php");
+
                         }
                         elseif (($user->get_email()==($_POST['username'])) and !($user->get_pass()==($_POST['password'])))
                         {
@@ -57,8 +60,8 @@ $hasMatch = 0;
                 
                }
         ?>
-        <form action="../Collection-genome.php">
-        <input type="submit" value="Click here to go back to browsing." />
+        
+        
         </form>
         </div>
     </body>

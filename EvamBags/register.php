@@ -1,4 +1,3 @@
-<?php include 'session.php'?>
 <html>
 <head>
     <title>This is the title</title>

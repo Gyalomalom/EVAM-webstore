@@ -1,4 +1,3 @@
-<?php include 'session.php'?>
 <?php include_once 'Includes/dbh.inc.php'?>
 <html>
 <head>
