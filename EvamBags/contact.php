@@ -5,10 +5,12 @@
 <link rel="stylesheet" type="text/css" href="Styles/Style.css">
 </head>
 <body>
+    <?php include 'Login-bar.php'?>
+    <?php include 'NavBar.html'; ?>
     <div class="container">
-  <form action="action_page.php">
+    <form action="action_page.php">
 
-    <label for="fname">First Name</label>
+    <label for="fname">Your name</label>
     <input type="text" id="fname" name="firstname" placeholder="Your name..">
 
     <label for="lname">Email address</label>
