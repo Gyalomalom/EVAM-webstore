@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>This is the title</title>
+    <title>Designer handbags</title>
 <link rel="stylesheet" type="text/css" href="Styles/Style.css">
 </head>
 <body>

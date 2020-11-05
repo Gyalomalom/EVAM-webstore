@@ -7,7 +7,7 @@ include_once ('Includes/dbh.inc.php');
 <!DOCTYPE html>
 <html>
 <head>
-    <title>This is the title</title>
+    <title>New items</title>
 <link rel="stylesheet" type="text/css" href="Styles/Style.css">
 </head>
 <body>

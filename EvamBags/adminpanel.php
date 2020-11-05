@@ -35,7 +35,7 @@
 			
 			<button type = "submit" name = "submit">Remove product</button>
         </form>
-		<button type = "submit" name = "submit"><a href = "logout.php" id = logout>Log out</a></button>
+		<button type = "logout" name = "logout"><a href = "logout.php" >Log out</a></button>
     </div>  
     	
     <?php include 'ContactInfo.php'?>

@@ -53,6 +53,16 @@ body{
 #p2{
     grid-template-columns: 80% 20%;
 }
+#p3{
+    grid-template-columns: 20% 80%;
+}
+#p4{
+    grid-template-columns: 80% 20%;
+}
+#p5{
+    grid-template-columns: 20% 80%;
+}
+
 #logo{
 padding: 10px;
     height: 15%;
@@ -64,9 +74,20 @@ padding: 10px;
 }
 #pi1{
     width: 90%;
-    height:auto;
+    height:auto%;
 }
-
+#pi4{
+    width: 90%;
+    height:auto%;
+}
+#pi5{
+    width: 90%;
+    height:auto%;
+}
+#pi6{
+    width: 90%;
+    height:auto%;
+}
 #separator{
     color: white;
 }
@@ -75,7 +96,7 @@ padding: 10px;
 }
 
 #ban1{
-     width:100%;
+    width:100%;
     height:auto;
 }
 #p3{
