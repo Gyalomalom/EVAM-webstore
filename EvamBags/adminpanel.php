@@ -11,21 +11,31 @@
     <?php include 'NavBar.html'; ?>
 
     <div class = container>
+        <b>Add new product</b>
         <form action="Handlers/upload.php" method="post" enctype="multipart/form-data">
             <input type = "file" name = "file">
 
-            <label for="itemname"><b>Item name:</b></label>    
+            <label for="itemname"><p>Item name:</p></label>    
             <input type = "text" name = "itemname">
 
-            <label for="itemprice"><b>Item price:</b></label>    
+            <label for="itemprice"><p>Item price:</p></label>    
             <input type = "text" name = "price">
 
-            <label for="collection"><b>Which collection does the item belong to:</b></label>    
+            <label for="collection"><p>Item collection:</p></label>    
             <input type = "text" name = "collection">
 
-            <button type = "submit" name = "submit">Upload file...</button>
+            <button type = "submit" name = "submit">Add product</button>
         </form>
-		<button type = "submit" name = "submit"><a href = "logout.php" id = loglink>Log out</a></div>
+		<b>Remove product</b>
+		<form action="Handlers/remove.php" method="post" enctype="multipart/form-data">
+		
+
+            <label for="productid"><p>Product ID:</b></label>    
+            <input type = "text" name = "productid">
+			
+			<button type = "submit" name = "submit">Remove product</button>
+        </form>
+		<button type = "submit" name = "submit"><a href = "logout.php" id = logout>Log out</a></button>
     </div>  
     	
     <?php include 'ContactInfo.php'?>
