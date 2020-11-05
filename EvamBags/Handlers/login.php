@@ -12,7 +12,6 @@ $hasMatch = 0;
 <html>
     <head><link rel="stylesheet" type="text/css" href="../Styles/Style.css"></head>
     <body>
-        <?php include '../Logout-Cart-bar.php'; ?>
         <div class = "alert">
         <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
         <?php
@@ -60,9 +59,9 @@ $hasMatch = 0;
                 
                }
         ?>
-        
-        
-        </form>
+            <form action="../login.php">
+                <input type="submit" value="Click here to try again!" />
+            </form>
         </div>
     </body>
 </html>

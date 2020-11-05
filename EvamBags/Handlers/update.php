@@ -12,19 +12,21 @@ include_once ('../Includes/dbh.inc.php');
 <?php
 if (isset($_POST['submit'])){
 
-$id = $_POST['productid'];    
-	
+$id = $_POST['productid'];
+$name = $_POST['itemname'];
+$price = $_POST['price'];    
+$collection = $_POST['collection'];	
 
 // Check connection
 if ($conn->connect_error) {
   die("Connection failed: " . $conn->connect_error);
 }else{
 
-// sql to delete a record
-$sql = "DELETE FROM items WHERE ID = $id;";
+// sql to update a record
+$sql = "UPDATE `items` SET `itemname` = '$name', `price` = '$price', `collection` = '$collection' WHERE `items`.`ID` = $id;";
 
 if ($conn->query($sql) === TRUE) {
-  echo "Record deleted successfully";
+  echo "Item updated successfully";
 } else {
   echo "ID doesn't match any products.";
 }
@@ -35,7 +37,7 @@ if ($conn->query($sql) === TRUE) {
 
 ?>
             <form action="../adminpanel.php">
-        <input type="submit" value="Click here to remove another item." />
+        <input type="submit" value="Click here to update another item." />
         </form>
         </div>
     </body>

@@ -64,8 +64,8 @@ else if (!filter_var($_POST['email'], FILTER_VALIDATE_EMAIL)) {
                     }
                 }
 ?>
-    <form action="../Collection-genome.php">
-        <input type="submit" value="Click here to go back to browsing." />
+    <form action="../login.php">
+        <input type="submit" value="Log in." />
     </form>
 </div>
 

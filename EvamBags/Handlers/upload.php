@@ -75,7 +75,7 @@ echo "You cannot upload files of this type. Please upload a different type of fi
 
 }
 ?>
-            <form action="../Admin-upload-page.php">
+            <form action="../adminpanel.php">
         <input type="submit" value="Click here to upload a new item." />
         </form>
         </div>

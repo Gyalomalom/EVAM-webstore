@@ -14,8 +14,8 @@
             <div class = text><b>David Horvath</b> <br> <p> Project management and full stack solutions. This website was based on the actual online store ran by David. </p></div>   
         </div>
         <div class = imageparagraph id = p2>
-            <div class = text><b>Aleksandar Nasev</b></div>
-            <div class = inlinePic><img src = "Images/slow.jpg" id = pi2></div>
+            <div class = text><b>Aleksandar Nasev</b><br> <p> Top quality website management. Trained and studied at Fontys University of Applied Sciences. </p></div>
+            <div class = inlinePic><img src = "Images/alek.jpg" id = pi2></div>
        
     </div>
 <?php include 'ContactInfo.php'?>
