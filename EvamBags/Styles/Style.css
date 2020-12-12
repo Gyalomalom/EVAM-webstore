@@ -3,14 +3,12 @@ body{
 }
 
 .LoginBar{
-    display: inline-grid;
-    grid-template-columns: auto auto auto;
-    background-color: #F8BA37;
+    
+    background-color: #000000;
     width: 100%;
 }
 .LogoutBar{
-    display: inline-grid;
-    grid-template-columns: auto auto;
+    
     background-color: #F8BA37;
     width: 100%;
 }
@@ -21,8 +19,7 @@ body{
     color: white;
 }
 .NavBar{
-    display: inline-grid;
-    grid-template-columns: auto auto auto auto;
+    
     width: 100%;
     padding: 0px;
     border-top: 2px groove;
@@ -35,47 +32,129 @@ body{
 }
 
 .NBitem{
-    text-align: center;
+    text-align: left;
 }
 .imageparagraph{
-    display: inline-grid;
-    grid-template-columns: auto auto;
-    grid-template-rows: 5% auto;
+    
     width: 90%;
     margin-top: 30px;
     margin-bottom: 30px;
     margin-left: 5%;
     margin-right: 5%;
 }
-#p1{
-    grid-template-columns: 30% 70%;
-}
-#p2{
-    grid-template-columns: 70% 30%;
-}
-#p3{
-    grid-template-columns: 30% 70%;
-}
-#p4{
-    grid-template-columns: 70% 30%;
-}
-#p5{
-    grid-template-columns: 30% 70%;
+
+:root {
+  --main-radius: 5px;
+  --main-padding: 5px;
 }
 
-#logo{
-padding: 10px;
-    height: 15%;
+body {
+  
 }
-.text{
-    width: auto;
-    height: auto;
-    padding: 5px;
+
+.container {
+  display: grid;
+  height: 100vh;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 0.2fr 1.5fr 1.2fr 1fr 0.8fr;
+  grid-template-areas:
+    "nav nav nav nav"
+    "main main main main"
+    ". content1 content2 ."
+	". content3 content4 ."
+    "footer footer footer footer";
+  grid-gap: 0.2rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  font-size: 12px;
+  color: #004d40;
+  text-align: center;
 }
-#pi1{
-    width: 90%;
-    height:auto%;
+
+nav {
+  
+  grid-area: nav;
+  border-radius: var(--main-radius);
+  padding-top: var(--main-padding);
+  height: 100%;
 }
+
+main {
+  background: #84ffff;
+  grid-area: main;
+  border-radius: var(--main-radius);
+  padding-top: var(--main-padding);
+  width: auto;
+  text-align: center;
+
+}
+
+#sidebar {
+  background: #18ffff;
+  grid-area: sidebar;
+  border-radius: var(--main-radius);
+  padding-top: var(--main-padding);
+}
+
+#content1 {
+  background: #6fffd2;
+  grid-area: content1;
+  border-radius: var(--main-radius);
+  padding-top: var(--main-padding);
+}
+
+#content2 {
+  background: #64ffda;
+  grid-area: content2;
+  border-radius: var(--main-radius);
+  padding-top: var(--main-padding);
+}
+
+#content3 {
+  background: #73ffba;
+  grid-area: content3;
+  border-radius: var(--main-radius);
+  padding-top: var(--main-padding);
+}
+#content4 {
+  background: #73ffba;
+  grid-area: content4;
+  border-radius: var(--main-radius);
+  padding-top: var(--main-padding);
+}
+
+footer {
+  background: #333333;
+  grid-area: footer;
+  border-radius: var(--main-radius);
+  padding-top: var(--main-padding);
+}
+
+a {
+  text-align: center;
+  display: block;
+  font-family: inherit;
+  text-decoration: none;
+  font-weight: bold;
+  margin: 1rem;
+}
+
+@media only screen and (max-width: 550px) {
+  .container {
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.4fr 0.4fr 2.2fr 1.2fr 1.2fr 1.2fr 1fr;
+    grid-template-areas:
+      "nav"
+      "main"
+      "content1"
+      "content2"
+      "content3"
+	  "content4"
+      "footer";
+  }
+}
+
+
 #pi4{
     width: 90%;
     height:auto%;
@@ -91,16 +170,9 @@ padding: 10px;
 #separator{
     color: white;
 }
-.banner{
-    text-align: center;
-}
 
-#ban1{
-    width:100%;
-    height:auto;
-}
 #p3{
-    grid-template-columns: 20% 80%;
+    
     background-color: darkgrey;
     text-align: center;
 }
@@ -111,10 +183,7 @@ padding: 10px;
     padding: 10%;
 }
 
-#pi2{
-    width: 90%;
-    height:auto;
-}
+
 
 .dropdown {
     position: relative;
@@ -146,26 +215,22 @@ padding: 10px;
 
 .wrapper{
     text-align: center;
-    display: inline-grid;
-    grid-template-columns: repeat(2, 1fr);
+    
 }
 
 .index-wrapper-mobile{
     text-align: center;
-    display: inline-grid;
-grid-template-columns: repeat(auto, auto)     !important ;
+    
 }
 
 .wrapper-mobile{
     text-align: center;
-    display: inline-grid;
-    grid-template-columns: repeat(auto, auto);
+    
 }
 
 .index-wrapper{
     text-align: left;
-    display: inline-grid;
-    grid-template-columns: repeat(1, 1fr);
+    
 }
 
 .logo{
@@ -274,8 +339,3 @@ button:hover {
   background-color: #e69b00;
 }
 
-div.container {
-  border-radius: 5px;
-  background-color: #f5f5f5;
-  padding: 20px;
-}
