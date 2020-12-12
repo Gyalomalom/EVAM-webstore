@@ -18,18 +18,11 @@ body{
     text-align: center;
     color: white;
 }
-.NavBar{
-    
-    width: 100%;
-    padding: 0px;
-    border-top: 2px groove;
-    border-bottom: 2px groove;
-    border-color: darkgray;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    margin-top: 10px;
-    margin-bottom: 20px;
+
+.size{
+  height: 20%;
 }
+
 
 .NBitem{
     text-align: left;
@@ -43,6 +36,34 @@ body{
     margin-right: 5%;
 }
 
+
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  
+  
+}
+
+
+li {
+  float: left;
+}
+
+li a {
+  display: block; 
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+ul.annbar li a:hover {
+  background-color: rgb(43, 43, 43);
+}
+
+
 :root {
   --main-radius: 5px;
   --main-padding: 5px;
@@ -52,23 +73,44 @@ body {
   
 }
 
+ul.black li a{
+  color:black;
+  
+  
+}
+
+ul.annbar li a{
+  color:white;
+  
+} 
+ul.annbar{
+  background-color: black;
+}
+
+ul.annbar{
+  color:white;
+  text-align: center;
+}
+
 .container {
   display: grid;
   height: 100vh;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-template-rows: 0.2fr 1.5fr 1.2fr 1fr 0.8fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 0.2fr 0.2fr 1.5fr 1.2fr 1fr 1fr 0.8fr;
   grid-template-areas:
-    "nav nav nav nav"
-    "main main main main"
-    ". content1 content2 ."
-	". content3 content4 ."
-    "footer footer footer footer";
+    ". ann ann ann ann ."
+    ". nav nav nav . ."
+    "banner banner banner banner banner banner"
+    ". con1 con1 content2 content2 ."
+    ". content3 content3 con4 con4 ."
+    ". con5 con5 content5 content5 ."
+    "footer footer footer footer footer footer";
   grid-gap: 0.2rem;
-  font-weight: 800;
+  font-weight: 600;
   text-transform: uppercase;
   font-size: 12px;
-  color: #004d40;
-  text-align: center;
+  
+  
 }
 
 nav {
@@ -84,14 +126,20 @@ main {
   grid-area: main;
   border-radius: var(--main-radius);
   padding-top: var(--main-padding);
-  width: auto;
-  text-align: center;
+  
+  
 
 }
 
 #sidebar {
   background: #18ffff;
   grid-area: sidebar;
+  border-radius: var(--main-radius);
+  padding-top: var(--main-padding);
+}
+#announce {
+  
+  grid-area: ann;
   border-radius: var(--main-radius);
   padding-top: var(--main-padding);
 }
@@ -104,23 +152,43 @@ main {
 }
 
 #content2 {
-  background: #64ffda;
+  
   grid-area: content2;
+  border-radius: var(--main-radius);
+  padding-top: var(--main-padding);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f5f7fa;
+}
+
+#content3 {
+  
+  grid-area: content3;
+  border-radius: var(--main-radius);
+  padding-top: var(--main-padding);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f5f7fa
+}
+#content4 {
+  
+  grid-area: content4;
   border-radius: var(--main-radius);
   padding-top: var(--main-padding);
 }
 
-#content3 {
-  background: #73ffba;
-  grid-area: content3;
+#content5 {
+  
+  grid-area: content5;
   border-radius: var(--main-radius);
   padding-top: var(--main-padding);
-}
-#content4 {
-  background: #73ffba;
-  grid-area: content4;
-  border-radius: var(--main-radius);
-  padding-top: var(--main-padding);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f5f7fa
+
 }
 
 footer {
@@ -137,6 +205,7 @@ a {
   text-decoration: none;
   font-weight: bold;
   margin: 1rem;
+  
 }
 
 @media only screen and (max-width: 550px) {
@@ -145,27 +214,49 @@ a {
     grid-template-rows: 0.4fr 0.4fr 2.2fr 1.2fr 1.2fr 1.2fr 1fr;
     grid-template-areas:
       "nav"
-      "main"
-      "content1"
+      "banner"
+      "con1"
       "content2"
       "content3"
-	  "content4"
+	    "con4"
       "footer";
   }
 }
 
+#banner{
+  width: 100%;
+  height:auto;
+  grid-area: banner;
+}
 
+#con1{
+  width: 100%;
+  height:auto;
+  grid-area: con1;
+}
+
+#con4{
+  width: 100%;
+  height:auto;
+  grid-area: con4;
+}
+
+#con5{
+  width: 100%;
+  height:auto;
+  grid-area: con5;
+}
 #pi4{
     width: 90%;
-    height:auto%;
+    height:auto;
 }
 #pi5{
     width: 90%;
-    height:auto%;
+    height:auto;
 }
 #pi6{
     width: 90%;
-    height:auto%;
+    height:auto;
 }
 #separator{
     color: white;
@@ -181,6 +272,16 @@ a {
     width: 90%;
     height: auto;
     padding: 10%;
+}
+
+#admin{
+	text-align: left;
+	color: white;
+}
+
+#login{
+	text-align: right;
+	color: white;
 }
 
 
@@ -229,13 +330,30 @@ a {
 }
 
 .index-wrapper{
-    text-align: left;
+  text-align: left;
     
 }
 
-.logo{
-    text-align: center;
+#logo{
+  grid-area: logo;
+}
+
+
+#login{
     
+	width: 70%;
+  height: auto;
+    
+}
+
+#facebook{
+  height: auto;
+  
+}
+
+#ig{
+  height: auto;
+  width: 90%;
 }
 
 /* The alert message box */
@@ -260,15 +378,16 @@ a {
 
 /* When moving the mouse over the close button */
 .closebtn:hover {
-  color: black;
+  color: grey;
 }
 
+
 a:link, a:visited {
-  color: black;
+  
   text-decoration: none;
 }
 a:hover {
-    color: orange;
+    color: grey;
 }
 
 #loglink:link, #loglink:visited {
