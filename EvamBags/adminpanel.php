@@ -1,5 +1,6 @@
 <?php include 'sessionadmin.php'?>
-<?php include_once 'Includes/dbh.inc.php'?>
+
+
 <!DOCTYPE html>
 <html>
 <head>

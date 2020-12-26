@@ -1,4 +1,4 @@
-<?php include_once 'Includes/dbh.inc.php'?>
+
 <html>
 <head>
     <title>This is the title</title>

@@ -1,6 +1,7 @@
 <?php 
-require_once('Classes/Bags.php');
-include_once ('Includes/dbh.inc.php');
+
+session_start();
+include 'Includes/autoload.inc.php'
 
 ?>
 
@@ -13,13 +14,12 @@ include_once ('Includes/dbh.inc.php');
 <body>
     <?php include 'Login-bar.php'?>
     <?php include 'NavBar.html'; ?>
-	<?php
-				$query = "SELECT * FROM items ORDER BY ID ASC";
-				$result = mysqli_query($conn, $query);
-				if(mysqli_num_rows($result) > 0)
+    <?php
+				$view = new View();
+                $result = $view->showProducts();
+				
+			    foreach($result as $row)
 				{
-					while($row = mysqli_fetch_array($result))
-					{
 				?>
     
     <div class = wrapper>
@@ -38,7 +38,7 @@ include_once ('Includes/dbh.inc.php');
     </div>
 	<?php
 					}
-				}
+				
 			?>
 
 <?php include 'ContactInfo.php'?>

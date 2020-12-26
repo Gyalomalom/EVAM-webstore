@@ -9,7 +9,7 @@ spl_autoload_register('controllerAutoloader');
 
 function viewAutoloader ($className) {
     
-    $path = sprintf('Classes/view/view.class.php', $className); 
+    $path = sprintf('../Classes/view/view.class.php', $className); 
     if (file_exists($path)) 
     { include $path; } 
     else 
@@ -18,7 +18,7 @@ function viewAutoloader ($className) {
 
 function controllerAutoloader ($className) {
     
-    $path = sprintf('Classes/controller/controller.class.php', $className); 
+    $path = sprintf('../Classes/controller/controller.class.php', $className); 
     if (file_exists($path)) 
     { include $path; } 
     else 
@@ -27,7 +27,7 @@ function controllerAutoloader ($className) {
 
 function modelAutoloader ($className) {
     
-    $path = sprintf('Classes/model/model.class.php', $className); 
+    $path = sprintf('../Classes/model/model.class.php', $className); 
     if (file_exists($path)) 
     { include $path; } 
     else 
@@ -36,7 +36,7 @@ function modelAutoloader ($className) {
 
 function dbAutoloader ($className) {
    
-    $path = sprintf('Classes/core/dbh.class.php', $className); 
+    $path = sprintf('../Classes/core/dbh.class.php', $className); 
     if (file_exists($path)) 
     { include $path; } 
     else 

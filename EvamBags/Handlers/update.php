@@ -1,5 +1,5 @@
 <?php
-include_once ('../Includes/dbh.inc.php');
+include '../Includes/handlerautoload.inc.php'
 ?>
 <!DOCTYPE html>
 <html>
@@ -10,30 +10,10 @@ include_once ('../Includes/dbh.inc.php');
   <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
 
 <?php
-if (isset($_POST['submit'])){
 
-$id = $_POST['productid'];
-$name = $_POST['itemname'];
-$price = $_POST['price'];    
-$collection = $_POST['collection'];	
 
-// Check connection
-if ($conn->connect_error) {
-  die("Connection failed: " . $conn->connect_error);
-}else{
-
-// sql to update a record
-$sql = "UPDATE `items` SET `itemname` = '$name', `price` = '$price', `collection` = '$collection' WHERE `items`.`ID` = $id;";
-
-if ($conn->query($sql) === TRUE) {
-  echo "Item updated successfully";
-} else {
-  echo "ID doesn't match any products.";
-}
-}
-}else{
-    echo "Please enter an ID.";
-}
+$controller = new Controller();
+$controller->updateInfo($_POST['productid'], $_POST['itemname'], $_POST['price'], $_POST['collection'])
 
 ?>
             <form action="../adminpanel.php">

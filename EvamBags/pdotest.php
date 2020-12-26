@@ -6,8 +6,8 @@ include 'Includes/autoload.inc.php'
 <?php 
 
 
-$test = new UsersView();
-$test->showUser('Cosby');
+$test = new View();
+$test->loginAdmin('anemail@gmail.com', 'lol');
 
 
 
