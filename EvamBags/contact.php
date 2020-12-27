@@ -1,3 +1,5 @@
+<?php session_start(); ?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -5,9 +7,11 @@
 <link rel="stylesheet" type="text/css" href="Styles/Style.css">
 </head>
 <body>
-    <?php include 'Login-bar.php'?>
-    <?php include 'NavBar.html'; ?>
-    <div class="container">
+  <div class="containercontact">
+
+    <div id="announce"><?php include 'Login-bar.php'; ?></div>
+    <nav><?php include 'NavBar.html'; ?> </nav>
+    <div class="containermessage">
     <form action="action_page.php">
 
     <label for="fname">Your name</label>
@@ -21,9 +25,10 @@
 
     <input type="submit" value="Submit">
 
-  </form>
-</div>
-<?php include 'ContactInfo.php'?>
+    </form>
+    </div>
+
+    <footer>HTML and CSS for website written by Aleksandar Nasev and David Horvath.</footer>
+  </div>
 </body>
-<footer>HTML and CSS for website written by Aleksandar Nasev and David Horvath.</footer>
 </html>

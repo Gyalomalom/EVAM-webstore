@@ -41,7 +41,7 @@ include 'Includes/autoload.inc.php'
 				
 			?>
 
-<?php include 'ContactInfo.php'?>
+
     </body>    
 <footer>HTML and CSS for website written by Aleksandar Nasev and David Horvath.</footer>
 </html>

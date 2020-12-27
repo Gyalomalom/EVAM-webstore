@@ -98,7 +98,7 @@ ul.annbar{
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
   grid-template-rows: 0.2fr 0.2fr 1.5fr 1.2fr 1fr 1fr 0.8fr;
   grid-template-areas:
-    ". ann ann ann ann ."
+    "ann ann ann ann ann ann"
     ". nav nav nav . ."
     "banner banner banner banner banner banner"
     ". con1 con1 content2 content2 ."
@@ -110,7 +110,144 @@ ul.annbar{
   text-transform: uppercase;
   font-size: 12px;
   
+}
+
+.containermission {
+  display: grid;
+  height: 100vh;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 0.2fr 0.2fr 1.5fr 1.2fr 1fr 1fr 1fr 0.8fr;
+  grid-template-areas:
+    "ann ann ann ann ann ann"
+    ". nav nav nav . ."
+    ". con1 con1 content1 content1 ."
+    ". content2 content2 con2 con2 ."
+    ". con3 con3 content3 content3 ."
+    ". content4 content4 con4 con4 ."
+    ". con5 con5 content5 content5 ."
+    "footer footer footer footer footer footer";
+  grid-gap: 0.2rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 12px;
   
+  
+}
+
+.containerabout {
+  display: grid;
+  height: 100vh;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 0.2fr 0.2fr 1fr 1fr 0.8fr;
+  grid-template-areas:
+    "ann ann ann ann ann ann"
+    ". nav nav nav . ."
+    ". con1 con1 content1 content1 ."
+    ". content2 content2 con2 con2 ."
+    "footer footer footer footer footer footer";
+  grid-gap: 0.2rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 12px;
+  
+  
+}
+
+.containercontact {
+  display: grid;
+  height: 100vh;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 0.2fr 0.2fr 1fr 1fr 1fr 1fr 0.8fr;
+  grid-template-areas:
+    "ann ann ann ann ann ann"
+    ". nav nav nav . ."
+    ". . . . . ."
+    ". msg msg msg msg ."
+    ". msg msg msg msg ."
+    ". . . . . ."
+    "footer footer footer footer footer footer";
+  grid-gap: 0.2rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 12px;
+  
+  
+}
+
+.containerlogin{
+
+  display: grid;
+  height: 100vh;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 0.2fr 0.2fr 1fr 1fr 1fr 1fr 1fr 0.8fr;
+  grid-template-areas:
+    "ann ann ann ann ann ann"
+    ". nav nav nav . ."
+    ". . . . . ."
+    ". . log log . ."
+    ". . log log . ."
+    ". . pass pass . ."
+    ". . . . . ."
+    "footer footer footer footer footer footer";
+  grid-gap: 0.2rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 12px;
+}
+
+.containeradmin{
+
+  display: grid;
+  height: 100vh;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 0.2fr 0.2fr 1fr 1fr 1fr 1fr 1fr 0.8fr;
+  grid-template-areas:
+    "ann ann ann ann ann ann"
+    ". nav nav nav . ."
+    ". . . . . ."
+    "add add rem rem up up"
+    "add add rem rem up up"
+    ". out out . . ."
+    ". . . . . ."
+    "footer footer footer footer footer footer";
+  grid-gap: 0.2rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 12px;
+}
+
+.containerloginfo{
+
+  grid-area: log;
+  background-color: rgba(147, 150, 153, 0.904);
+}
+
+.containerpass{
+
+  grid-area: pass;
+  background-color: rgba(147, 150, 153, 0.904);
+}
+
+.containermessage{
+  grid-area: msg;
+}
+
+.containeradd{
+
+  grid-area: add;
+  background-color: rgba(147, 150, 153, 0.904);
+}
+
+.containerremove{
+
+  grid-area: rem;
+  background-color: rgba(147, 150, 153, 0.904);
+}
+
+.containerupdate{
+
+  grid-area: up;
+  background-color: rgba(147, 150, 153, 0.904);
 }
 
 nav {
@@ -131,6 +268,10 @@ main {
 
 }
 
+#logout{
+  grid-area: out;
+}
+
 #sidebar {
   background: #18ffff;
   grid-area: sidebar;
@@ -145,10 +286,13 @@ main {
 }
 
 #content1 {
-  background: #6fffd2;
   grid-area: content1;
   border-radius: var(--main-radius);
   padding-top: var(--main-padding);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f5f7fa;
 }
 
 #content2 {
@@ -177,6 +321,10 @@ main {
   grid-area: content4;
   border-radius: var(--main-radius);
   padding-top: var(--main-padding);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f5f7fa
 }
 
 #content5 {
@@ -233,6 +381,18 @@ a {
   width: 100%;
   height:auto;
   grid-area: con1;
+}
+
+#con2{
+  width: 100%;
+  height:auto;
+  grid-area: con2;
+}
+
+#con3{
+  width: 100%;
+  height:auto;
+  grid-area: con3;
 }
 
 #con4{
@@ -429,7 +589,7 @@ input[type=file], select {
 /*Submit buttons*/
 input[type=submit] {
   width: 100%;
-  background-color: #F8BA37;
+  background-color: #000000;
   color: white;
   padding: 14px 20px;
   margin: 8px 0;
@@ -440,7 +600,7 @@ input[type=submit] {
 
 button {
   width: 100%;
-  background-color: #F8BA37;
+  background-color: #000000;
   color: white;
   padding: 14px 20px;
   margin: 8px 0;
@@ -451,10 +611,10 @@ button {
 
 /* Add a background color to the submit button on mouse-over */
 input[type=submit]:hover {
-  background-color: #e69b00;
+  background-color: #a7a7a7;
 }
 
 button:hover {
-  background-color: #e69b00;
+  background-color: #a7a7a7;
 }
 

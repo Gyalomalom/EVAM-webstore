@@ -1,3 +1,4 @@
+<?php session_start(); ?>
 
 <!DOCTYPE html>
 <html>
@@ -28,3 +29,5 @@
   
   <footer>Footer</footer>
 </div>
+
+</html>

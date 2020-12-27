@@ -1,3 +1,5 @@
+<?php session_start(); ?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -5,20 +7,26 @@
 <link rel="stylesheet" type="text/css" href="Styles/Style.css">
 </head>
 <body>
-    <?php include 'Login-bar.php'?>
-    <?php include 'NavBar.html'; ?>
+    
 
-    <div class = index-wrapper>
-        <div class = imageparagraph id = p1>
-            <div class = inlinePic><img src = "Images/david.jpg" id = pi1></div>
-            <div class = text><b>David Horvath</b> <br> <p> Project management and full stack solutions. This website was based on the actual online store ran by David. </p></div>   
-        </div>
-        <div class = imageparagraph id = p2>
-            <div class = text><b>Aleksandar Nasev</b><br> <p> Top quality website management. Trained and studied at Fontys University of Applied Sciences. </p></div>
-            <div class = inlinePic><img src = "Images/alek.jpg" id = pi2></div>
-       
+    <div class = containerabout>
+
+    <div id="announce"><?php include 'Login-bar.php'; ?></div>
+    <nav><?php include 'NavBar.html'; ?> </nav>
+
+    <img src = "Images/david.jpg" id = "con1">
+    
+    <div id = "content1"><p> David Horvath: Project management and full stack solutions. This website was based on the actual online store ran by David. </p></div>   
+        
+    
+    <div id = "content2"><p> Aleksandar Nasev: Top quality website management. Trained and studied at Fontys University of Applied Sciences. </p></div>
+    
+    <img src = "Images/alek.jpg" id = "con2">
+    
+    <footer>HTML and CSS for website written by Aleksandar Nasev and David Horvath.</footer>
+
     </div>
-<?php include 'ContactInfo.php'?>
+
 </body>
-<footer>HTML and CSS for website written by Aleksandar Nasev and David Horvath.</footer>
+
 </html>

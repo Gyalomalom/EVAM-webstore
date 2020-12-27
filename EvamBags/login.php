@@ -5,11 +5,13 @@
 <link rel="stylesheet" type="text/css" href="Styles/Style.css">
 </head>
 <body>
-    <?php include 'Login-bar.php'?>
-    <?php include 'NavBar.html'; ?>
+    
 <form action="Handlers/login.php" method="post">
 
-	<div class="container">
+    <div class="containerlogin">
+	<div id="announce"><?php include 'Login-bar.php'; ?></div>
+    <nav><?php include 'NavBar.html'; ?> </nav>
+    <div class="containerloginfo">
     <label for="uname"><b>Username</b></label>
     <input type="text" placeholder="Enter Username" name="username" required>
 
@@ -22,12 +24,14 @@
     </label>
 	</div>
 
-	<div class="container" style="background-color:#f1f1f1">
+	<div class="containerpass" style="background-color:#f1f1f1">
     <button type="button" class="cancelbtn">Cancel</button>
     <span class="psw"><a href="#">Forgot password?</a></span>
-	</div>
+    </div>
+    <footer>HTML and CSS for website written by Aleksandar Nasev and David Horvath.</footer>
+
+    </div>
 </form>
-    <?php include 'ContactInfo.php'?>
+    
 </body>
-<footer>HTML and CSS for website written by Aleksandar Nasev and David Horvath.</footer>
 </html>
