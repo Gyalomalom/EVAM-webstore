@@ -45,7 +45,7 @@ class Model extends Dbh {
 
     protected function getProducts(){
 
-      $sql = "SELECT * FROM items ORDER BY ID AS";
+      $sql = "SELECT * FROM items ORDER BY ID";
       $stmt = $this->connect()->prepare($sql);
       $stmt->execute();
 

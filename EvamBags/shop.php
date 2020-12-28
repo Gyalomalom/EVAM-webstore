@@ -18,27 +18,33 @@ include 'Includes/autoload.inc.php'
 				$view = new View();
                 $result = $view->showProducts();
 				
+    
+    if (!empty($result))
 			    foreach($result as $row)
-				{
+                {
 				?>
     
-    <div class = wrapper>
-        <div class = itemimage id = c1>
-            <div class = inlinePic><img src = "Uploads/<?php echo $row["imagename"]; ?>" id = pi1></div>
-            <div class = descriptionText><p>
-            <?php echo $row["itemname"]; ?>
-            <br>
-            <?php echo $row["collection"]; ?>
-            <br>
-            <?php echo $row["price"]; ?>
-            <br>
-            </p></div>
+  
+ <div class = wrapper>
+        <div id = c1>
+            <div class = inlinePic>
+                <img src = "Uploads/<?php echo $row["imagename"]; ?>">
+            </div>
+            <div class = descriptionText>
+                    <p>
+                    <?php echo $row["itemname"]; ?>
+                    <br>
+                    <?php echo $row["collection"]; ?>
+                    <br>
+                    <?php echo $row["price"]; ?>
+                    <br>
+                    </p>
+            </div>
         </div>
-        
     </div>
 	<?php
-					}
-				
+    }
+    else echo "No results could be returned from the database at this time.";
 			?>
 
 
