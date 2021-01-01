@@ -114,19 +114,29 @@ class Model extends Dbh {
     
     }
 
-    protected function createUser($email, $firstname, $lastname, $pass){
+    protected function createUser($email, $firstname, $lastname, $pass)
+    {
+        
+        $Err = array();    
+            if ((!preg_match("/^[a-zA-Z-' ]*$/",$firstname)) or (!preg_match("/^[a-zA-Z-' ]*$/",$lastname)))
+            {
+              $Err[] = "Only letters and white space allowed";
+                
+            }
 
+            if (!filter_var($email, FILTER_VALIDATE_EMAIL)) 
+            {
+              $Err[] = "Email format was incorrect.";
+            }
 
-      $sql = "INSERT INTO users (email, firstname, lastname, pass) VALUES (?, ?, ?, ?);";
-      $stmt = $this->connect()->prepare($sql);
-      $stmt->execute([$email, $firstname, $lastname, $pass]);
-
-      echo "Welcome" . " " . $firstname . " " . $lastname. ", you've successfully completed your registration!";
-
+            if (empty($Err))
+            {
+            $this->setUser($email, $firstname, $lastname, $pass);
+            }
+        
+        return $Err;
+        
     }
-
-            
-    
 
 }
 

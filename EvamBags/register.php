@@ -1,38 +1,45 @@
+<!DOCTYPE html>
 <html>
 <head>
     <title>Register</title>
 <link rel="stylesheet" type="text/css" href="Styles/Style.css">
 </head>
 <body>
-    <?php include 'Login-bar.php'?>
-    <?php include 'NavBar.html'; ?>
-<form action="Handlers/register.php" method = "post">
-	<div class="container">
-		<h1>Create account</h1>
-		<p>Please fill in this form to create an account.</p>
-		<hr>
-		<label for="firstname"><b>First name</b></label>
-		<input type="text" placeholder="Enter first name" name="firstname" id="fname" required>
-		
-		<label for="lastname"><b>Last name</b></label>
-		<input type="text" placeholder="Enter last name" name="lastname" id="lname" required>
+    
+    <form id = regform action="Handlers/register.php" method="post" >
 
-		<label for="email"><b>Email</b></label>
-		<input type="text" placeholder="Enter Email" name="email" id="email" required>
-
-		<label for="psw"><b>Password</b></label>
-		<input type="password" placeholder="Enter Password" name="password" id="psw" required>
-
-		<p>By creating an account you agree to our <a href="#">Terms & Privacy"</a>.</p>
-		<input type="submit" value = "register" name = "submit"/>
+    <div class="containerRegister">
+	<div id="announce"><?php include 'Login-bar.php'; ?></div>
+    <nav><?php include 'NavBar.html'; ?> </nav>
+    <div class="containerreginfo">
         
-	</div>
+    <label for="FirstName"><b>Enter your first name:</b></label>
+    <input type="text" placeholder="First name..." name="firstname" required id = fn >
+        
+    <label for="LastName"><b>Enter your last name:</b></label>
+    <input type="text" placeholder="Last name..." name="lastname" required id = ln>
+        
+    <label for="email"><b>Enter your e-mail address:</b></label>
+    <input type="text" placeholder="E-mail..." name="email" required id = mail>
 
-	<div class="container signin">
-    <p>Returning customer? <a href=login.php>Sign in</a>.</p>
+    <label for="psw"><b>Enter your password:</b></label>
+    <input type="password" placeholder="Password..." name="password" required id = pw>
+
+    <input id = regbtn type="submit" value = "Register" disabled />
+    <label>
+    
+    <input type="checkbox" checked="checked" name="remember"> Remember me
+    </label>
+    <span class="psw"><a href="login.php">Already have an account? Click here to log in!</a></span>
 	</div>
+    
+        
+    <script src="//code.jquery.com/jquery-1.12.0.min.js"></script>
+    <script src = "FormValidation/FormValidationRegister.js"></script>
+
+    <footer>HTML and CSS for website written by Aleksandar Nasev and David Horvath.</footer>
+
+    </div>
 </form>
-    <?php include 'ContactInfo.php'?>
 </body>
-<footer>HTML and CSS for website written by Aleksandar Nasev and David Horvath.</footer>
 </html>

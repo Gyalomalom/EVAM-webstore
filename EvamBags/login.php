@@ -27,6 +27,7 @@
 	<div class="containerpass" style="background-color:#f1f1f1">
     <button type="button" class="cancelbtn">Cancel</button>
     <span class="psw"><a href="#">Forgot password?</a></span>
+        <span class="psw"><a href="register.php">Don't have an account yet? Click here to register!</a></span>
     </div>
     <footer>HTML and CSS for website written by Aleksandar Nasev and David Horvath.</footer>
 

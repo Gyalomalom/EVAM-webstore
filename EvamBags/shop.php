@@ -26,9 +26,8 @@ include 'Includes/autoload.inc.php'
     
   
  <div class = wrapper>
-        <div id = c1>
             <div class = inlinePic>
-                <img src = "Uploads/<?php echo $row["imagename"]; ?>">
+                <img src = "Uploads/<?php echo $row["imagename"]; ?>" id = pi1>
             </div>
             <div class = descriptionText>
                     <p>
@@ -40,14 +39,13 @@ include 'Includes/autoload.inc.php'
                     <br>
                     </p>
             </div>
-        </div>
-    </div>
+</div>
 	<?php
     }
     else echo "No results could be returned from the database at this time.";
-			?>
+?>
 
 
-    </body>    
+</body>    
 <footer>HTML and CSS for website written by Aleksandar Nasev and David Horvath.</footer>
 </html>

@@ -2,10 +2,6 @@
 
 class Controller extends Model {
 
-    public function createUser($email, $firstname, $lastname, $pass) {
-        $this->setUser($email, $firstname, $lastname, $pass);
-    }
-
     public function deleteProduct($id){
         $this->removeProduct($id);
     }
@@ -19,6 +15,6 @@ class Controller extends Model {
     }
 
     public function registerUser($email, $firstname, $lastname, $pass){
-        $this->createUser($email, $firstname, $lastname, $pass);
+        return $this->createUser($email, $firstname, $lastname, $pass);
     }
 }

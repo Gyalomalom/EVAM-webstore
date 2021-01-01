@@ -195,6 +195,28 @@ ul.annbar{
   font-size: 12px;
 }
 
+.containerRegister{
+    display: grid;
+  height: 100vh;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 0.2fr 0.2fr 1fr 1fr 1fr 1fr 1fr 1fr 0.8fr;
+  grid-template-areas:
+    "ann ann ann ann ann ann"
+    ". nav nav nav . ."
+    ". . . . . ."
+    ". . reg reg . ."
+    ". . reg reg . ."
+    ". . reg reg . ."
+    ". . reg reg . ."
+    ". . pass pass . ."
+    ". . . . . ."
+    "footer footer footer footer footer footer";
+  grid-gap: 0.2rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 12px;
+}
+
 .containeradmin{
 
   display: grid;
@@ -219,6 +241,12 @@ ul.annbar{
 .containerloginfo{
 
   grid-area: log;
+  background-color: rgba(147, 150, 153, 0.904);
+}
+
+.containerreginfo{
+
+  grid-area: reg;
   background-color: rgba(147, 150, 153, 0.904);
 }
 
@@ -606,6 +634,21 @@ input[type=submit] {
   cursor: pointer;
 }
 
+input[type=submit]:disabled {
+  width: 100%;
+  background-color: #D0D0D0;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:disabled {
+    background-color: darkgrey;
+}
+
 button {
   width: 100%;
   background-color: #000000;
@@ -618,7 +661,7 @@ button {
 }
 
 /* Add a background color to the submit button on mouse-over */
-input[type=submit]:hover {
+input[type=submit]:hover:not([disabled]) {
   background-color: #a7a7a7;
 }
 

@@ -31,6 +31,7 @@ class View extends Model {
         return $this->getProducts();
         
     }
+    
 }
     
 
