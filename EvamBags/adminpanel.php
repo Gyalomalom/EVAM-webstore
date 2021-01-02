@@ -97,6 +97,7 @@ include 'Includes/autoload.inc.php'?>
     <footer><?php include 'footer.html'; ?></footer>
     </div>
 <script src="//code.jquery.com/jquery-1.12.0.min.js"></script>
-    <script src = "additionalJS/producttable.js"></script>    	
+    <script src = "additionalJS/producttable.js"></script>
+    <script src = "FormValidation/FormValidationAdmin.js"></script>
 </body>
 </html>
