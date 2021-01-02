@@ -1,4 +1,5 @@
-<?php include 'sessionadmin.php'?>
+<?php include 'sessionadmin.php';
+include 'Includes/autoload.inc.php'?>
 
 
 <!DOCTYPE html>
@@ -13,7 +14,29 @@
     <div class=containeradmin>
     <div id="announce"><?php include 'Login-bar.php'; ?></div>
     <nav><?php include 'NavBar.html'; ?> </nav>
+    
+    <div class = containertable id = cnttbl>
+        <h2>Please select a product from the database.</h2>
 
+        <form action=""> 
+          <select name="customers" onchange="showCustomer(this.value)">
+            <option value="">Select a product:</option>
+                <?php
+				$view = new View();
+                $result = $view->showProducts();
+				
+    
+                if (!empty($result))
+			    foreach($result as $row)
+                {
+				?>            
+              <option value="<?php echo $row["ID"]; ?>"> <?php echo $row["itemname"]; ?></option>
+          <?php }; ?>  
+          </select>
+        </form>
+        <br>
+        <div id="txtHint">Product info will be listed here...</div>
+    </div>
     <div class = containeradd id = cntadd>
         <label><b>Add new product</b></label>
         <form action="Handlers/upload.php" method="post" enctype="multipart/form-data">
@@ -74,6 +97,6 @@
     <footer><?php include 'footer.html'; ?></footer>
     </div>
 <script src="//code.jquery.com/jquery-1.12.0.min.js"></script>
-    <script src = "FormValidation/FormValidationAdmin.js"></script>    	
+    <script src = "additionalJS/producttable.js"></script>    	
 </body>
 </html>
