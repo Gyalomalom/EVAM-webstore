@@ -83,6 +83,26 @@ class Model extends Dbh {
       
     }
 
+    protected function getProduct($id){
+
+      if (empty($id) && $id < 0)
+      {
+        $result = "Wrong id.";
+                
+      }
+      else
+      {
+
+      $sql = "SELECT * FROM items WHERE ID = ?";
+      $stmt = $this->connect()->prepare($sql);
+      $stmt->execute([$id]);
+
+      return $stmt->fetch();
+      }
+
+      
+    }
+
     protected function removeProduct($id){
 
       if(is_numeric($id) && $id >= 0 ){
