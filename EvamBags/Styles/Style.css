@@ -226,6 +226,7 @@ ul.annbar{
     "ann ann ann ann ann ann"
         ". nav nav nav . ."
         ". . . . . ."
+        "tbl tbl tbl . . ."
         "add add rem rem up up"
         ". . . . . ."
         ". . . . . ."
@@ -346,6 +347,10 @@ ul.annbar{
 
   grid-area: up;
   background-color: rgba(147, 150, 153, 0.904);
+}
+
+.containertable{
+    grid-area: tbl;
 }
 
 .social-networks { 
@@ -605,26 +610,6 @@ footer {
     font-size: 12px;
   }
   
-  .containeradmin{
-  
-    
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
-    grid-template-rows: 0.2fr 0.2fr 1fr 1fr 1fr 1fr 1fr 0.8fr;
-    grid-template-areas:
-      "ann ann ann ann ann ann"
-        ". nav nav nav . ."
-        ". . . . . ."
-        "add add rem rem up up"
-        ". . . . . ."
-        ". . . . . ."
-        ". . out out . ."
-        ". . . . . ."
-        "footer footer footer footer footer footer"
-    grid-gap: 0.2rem;
-    font-weight: 600;
-    text-transform: uppercase;
-    font-size: 12px;
-  }
 
   .footer-container { 
     grid-template-columns: 1fr; 
