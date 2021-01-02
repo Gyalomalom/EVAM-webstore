@@ -156,7 +156,7 @@ ul.annbar{
   
 }
 
-.containercontact {
+.containercontacttt {
   display: grid;
   height: 100vh;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
@@ -557,8 +557,8 @@ footer {
       "ann ann ann ann ann ann"
       ". nav nav nav . ."
       ". . . . . ."
-      ". msg msg msg msg ."
-      ". msg msg msg msg ."
+      ". . msg msg . ."
+      ". . . . . ."
       ". . . . . ."
       "footer footer footer footer footer footer";
     grid-gap: 0.2rem;

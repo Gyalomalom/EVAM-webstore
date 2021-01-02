@@ -22,7 +22,8 @@
     <input type="text" id="lname" name="lastname" placeholder="Your last name..">
 
     <label for="subject">Subject</label>
-    <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+        <br>
+    <textarea id="subject" name="subject" placeholder="Write something.." row = "8" cols = "80"></textarea>
 
     <input type="submit" value="Submit">
 

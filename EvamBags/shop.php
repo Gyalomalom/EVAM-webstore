@@ -8,7 +8,7 @@ include 'Includes/autoload.inc.php'
 <!DOCTYPE html>
 <html>
 <head>
-    <title>New items</title>
+    <title>Shop</title>
 <link rel="stylesheet" type="text/css" href="Styles/Style.css">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 </head>

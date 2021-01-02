@@ -1,7 +1,7 @@
 
 <html>
 <head>
-    <title>This is the title</title>
+    <title>Log in</title>
 <link rel="stylesheet" type="text/css" href="Styles/Style.css">
 </head>
 <body>
