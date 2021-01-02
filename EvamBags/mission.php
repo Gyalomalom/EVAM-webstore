@@ -5,6 +5,7 @@
 <head>
     <title>Mission</title>
 <link rel="stylesheet" type="text/css" href="Styles/Style.css">
+<meta name="viewport" content="width=device-width,initial-scale=1">
 </head>
 <body>
     
@@ -34,7 +35,7 @@
         <img src = "Images/vegan.jpg" id = "con5">
             
         <div id = "content5"><p>Vegan fashion is clothing and accessories made from cruelty-free sources, i.e. NO animal products were used in production of garments and gear, and no animals were harmed. Instead of buying leather clothing and leather accessories such belts, shoes, and purses - Look for products made with natural or man-made fiber like cotton, hemp, linen, microfiber, ramie, pleather, and imitation leather.</p></div>
-        <footer>Footer</footer>
+        <footer><?php include 'footer.html'; ?></footer>
     
     </div>    
     

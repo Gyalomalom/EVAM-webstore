@@ -5,6 +5,7 @@
 <head>
     <title>Designer handbags</title>
 <link rel="stylesheet" type="text/css" href="Styles/Style.css">
+<meta name="viewport" content="width=device-width,initial-scale=1">
 </head>
 <div class="container">
   <div id="announce"><?php include 'Login-bar.php'; ?></div>
@@ -27,7 +28,7 @@
   </div>
 
   
-  <footer>Footer</footer>
+  <footer><?php include 'footer.html'; ?></footer>
 </div>
 
 </html>

@@ -3,6 +3,7 @@
 <head>
     <title>Register</title>
 <link rel="stylesheet" type="text/css" href="Styles/Style.css">
+<meta name="viewport" content="width=device-width,initial-scale=1">
 </head>
 <body>
     
@@ -37,7 +38,7 @@
     <script src="//code.jquery.com/jquery-1.12.0.min.js"></script>
     <script src = "FormValidation/FormValidationRegister.js"></script>
 
-    <footer>HTML and CSS for website written by Aleksandar Nasev and David Horvath.</footer>
+    <footer><?php include 'footer.html'; ?></footer>
 
     </div>
 </form>

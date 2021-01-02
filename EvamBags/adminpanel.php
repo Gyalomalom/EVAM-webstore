@@ -6,6 +6,7 @@
 <head>
     <title>Upload or edit a file</title>
 <link rel="stylesheet" type="text/css" href="Styles/Style.css">
+<meta name="viewport" content="width=device-width,initial-scale=1">
 </head>
 <body>
 
@@ -68,7 +69,7 @@
     <form action = "logout.php" method = post enctype = "multipart/form-data">
     <button type = "submit" name = "logout" id="logout">Log out</button>
     </form>
-    <footer>HTML and CSS for website written by Aleksandar Nasev and David Horvath.</footer>
+    <footer><?php include 'footer.html'; ?></footer>
     </div>
     	
 </body>

@@ -5,6 +5,7 @@
 <head>
     <title>About</title>
 <link rel="stylesheet" type="text/css" href="Styles/Style.css">
+<meta name="viewport" content="width=device-width,initial-scale=1">
 </head>
 <body>
     
@@ -23,7 +24,7 @@
     
     <img src = "Images/alek.jpg" id = "con2">
     
-    <footer>HTML and CSS for website written by Aleksandar Nasev and David Horvath.</footer>
+    <footer><?php include 'footer.html'; ?></footer>
 
     </div>
 

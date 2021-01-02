@@ -10,6 +10,7 @@ include 'Includes/autoload.inc.php'
 <head>
     <title>New items</title>
 <link rel="stylesheet" type="text/css" href="Styles/Style.css">
+<meta name="viewport" content="width=device-width,initial-scale=1">
 </head>
 <body>
     <?php include 'Login-bar.php'?>
@@ -47,5 +48,5 @@ include 'Includes/autoload.inc.php'
 
 
 </body>    
-<footer>HTML and CSS for website written by Aleksandar Nasev and David Horvath.</footer>
+<footer><?php include 'footer.html'; ?></footer>
 </html>
