@@ -4,6 +4,14 @@
 class Model extends Dbh {
 
     protected  function getUser($name) {
+
+      if (empty($name))
+      {
+        $result = "Name cannot be empty.";
+                
+      }
+      else
+      {
         $sql = "SELECT * FROM users WHERE lastname = ?";
         $stmt = $this->connect()->prepare($sql);
         $stmt->execute([$name]);
@@ -11,6 +19,10 @@ class Model extends Dbh {
         
 
         $result =  $stmt->fetchAll();
+
+        return $result;
+
+      }
 
         
     }
@@ -25,22 +37,39 @@ class Model extends Dbh {
 
     protected function loginUser($email, $pass){
 
-      $sql = "SELECT * FROM users WHERE email = ? AND pass = ?";
-      $stmt = $this->connect()->prepare($sql);
-      $stmt->execute([$email, $pass]);
+      $Err = array();    
+            if (empty($pass))
+            {
+              $Err[] = "Password required";
+                
+            }
 
-      $result = $stmt->fetch();
+            if (!filter_var($email, FILTER_VALIDATE_EMAIL)) 
+            {
+              $Err[] = "Email format was incorrect.";
+            }
 
-      if ($stmt->rowCount() > 0) {
+            if (empty($Err))
+            {
+              $sql = "SELECT * FROM users WHERE email = ? AND pass = ?";
+              $stmt = $this->connect()->prepare($sql);
+              $stmt->execute([$email, $pass]);
         
-        $result = true;
+              $result = $stmt->fetch();
         
-      } else {
-
-        $result = false;
-      }
-    
-      return $result;
+              if ($stmt->rowCount() > 0) {
+                
+                $result = true;
+                
+              } else {
+        
+                $result = false;
+              }
+            
+              return $result;
+            }
+        
+        return $Err;
     }
 
     protected function getProducts(){
@@ -56,17 +85,50 @@ class Model extends Dbh {
 
     protected function removeProduct($id){
 
+      if(is_numeric($id) && $id >= 0 ){
+
       $sql = "DELETE FROM items WHERE ID =?";
       $stmt = $this->connect()->prepare($sql);
       $stmt->execute([$id]);
+
+      }
+      else
+      {
+        $result = "Incorrect product ID.";
+
+      }
 
     }
 
     protected function updateProduct($id, $name, $price, $collection){
 
-      $sql = "UPDATE items SET itemname = ?, price = ?, collection = ? WHERE ID = ?";
-      $stmt = $this->connect()->prepare($sql);
-      $stmt->execute([$name, $price, $collection, $id]);
+      
+
+      $Err = array();    
+            if (empty($name) && empty($collection))
+            {
+              $Err[] = "Collection and name cannot be empty.";
+                
+            }
+
+            if (!is_numeric($price) && !is_numeric($id)) 
+            {
+              $Err[] = "Price and id has to be numerals.";
+            }
+
+            if ($id < 0) 
+            {
+              $Err[] = "ID cannot be negative";
+            }
+
+            if (empty($Err))
+            {
+              $sql = "UPDATE items SET itemname = ?, price = ?, collection = ? WHERE ID = ?";
+              $stmt = $this->connect()->prepare($sql);
+              $stmt->execute([$name, $price, $collection, $id]);
+            }
+        
+        return $Err;
 
     }
 
