@@ -7,13 +7,14 @@
 </head>
 <body>
     
-    <form id = regform action="Handlers/register.php" method="post" >
+    
 
     <div class="containerRegister">
-	<div id="announce"><?php include 'Login-bar.php'; ?></div>
+    <div id="announce"><?php include 'Login-bar.php'; ?></div>
     <nav><?php include 'NavBar.html'; ?> </nav>
-    <div class="containerreginfo">
         
+    <div class="containerreginfo">
+    <form id = regform action="Handlers/register.php" method="post" >    
     <label for="FirstName"><b>Enter your first name:</b></label>
     <input type="text" placeholder="First name..." name="firstname" required id = fn >
         
@@ -25,22 +26,25 @@
 
     <label for="psw"><b>Enter your password:</b></label>
     <input type="password" placeholder="Password..." name="password" required id = pw>
-
+        
     <input id = regbtn type="submit" value = "Register" disabled />
+        
     <label>
-    
     <input type="checkbox" checked="checked" name="remember"> Remember me
     </label>
+    <br>    
     <span class="psw"><a href="login.php">Already have an account? Click here to log in!</a></span>
+    </form>
+    
 	</div>
     
         
     <script src="//code.jquery.com/jquery-1.12.0.min.js"></script>
     <script src = "FormValidation/FormValidationRegister.js"></script>
-
+    
     <footer><?php include 'footer.html'; ?></footer>
 
     </div>
-</form>
+
 </body>
 </html>

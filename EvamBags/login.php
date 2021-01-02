@@ -6,12 +6,14 @@
 </head>
 <body>
     
-<form action="Handlers/login.php" method="post">
+
 
     <div class="containerlogin">
 	<div id="announce"><?php include 'Login-bar.php'; ?></div>
     <nav><?php include 'NavBar.html'; ?> </nav>
     <div class="containerloginfo">
+         <form action="Handlers/login.php" method="post">   
+
     <label for="uname"><b>Username</b></label>
     <input type="text" placeholder="Enter Username" name="username" required>
 
@@ -22,6 +24,7 @@
     <label>
     <input type="checkbox" checked="checked" name="remember"> Remember me
     </label>
+    </form>
 	</div>
 
 	<div class="containerpass" style="background-color:#f1f1f1">
@@ -31,7 +34,7 @@
     <footer><?php include 'footer.html'; ?></footer>
 
     </div>
-</form>
+
     
 </body>
 </html>
