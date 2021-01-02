@@ -10,7 +10,34 @@
 <div class="container">
   <div id="announce"><?php include 'Login-bar.php'; ?></div>
   <nav><?php include 'NavBar.html'; ?> </nav>
-  <img src = "Images/banner.jpg" id="banner"/>
+
+<!-- slideshow code is heavily based on the example slideshow provided by w3 schools -->
+<!-- Slideshow container -->
+<div class="slideshow-container" id = banner>
+
+  <!-- Full-width images with number and caption text -->
+  <div class="mySlides fade">
+    <div class="numbertext">1 / 3</div>
+    <img src="Images/banner.jpg" style="width:100%">
+  </div>
+
+  <div class="mySlides fade">
+    <div class="numbertext">2 / 3</div>
+    <img src="Images/bannerslide2.png" style="width:100%">
+  </div>
+
+  <div class="mySlides fade">
+    <div class="numbertext">3 / 3</div>
+    <img src="Images/bannerslide3.jpg" style="width:100%">
+  </div>
+
+  <!-- Next and previous buttons -->
+  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+  <a class="next" onclick="plusSlides(1)">&#10095;</a>
+</div>
+<br>
+
+
 
   <div id="annbar">  </div>
 
@@ -30,5 +57,6 @@
   
   <footer><?php include 'footer.html'; ?></footer>
 </div>
-
+<script src="//code.jquery.com/jquery-1.12.0.min.js"></script>
+<script src = "additionalJS/slideshow.js"></script>
 </html>
