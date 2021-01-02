@@ -12,15 +12,15 @@
 	<div id="announce"><?php include 'Login-bar.php'; ?></div>
     <nav><?php include 'NavBar.html'; ?> </nav>
     <div class="containerloginfo">
-         <form action="Handlers/login.php" method="post">   
+         <form action="Handlers/login.php" method="post" id = logform>   
 
     <label for="uname"><b>Username</b></label>
-    <input type="text" placeholder="Enter Username" name="username" required>
+    <input id = unm type="text" placeholder="Enter Username" name="username" required>
 
     <label for="psw"><b>Password</b></label>
-    <input type="password" placeholder="Enter Password" name="password" required>
+    <input id = pwd type="password" placeholder="Enter Password" name="password" required>
 
-    <button type="submit">Login</button>
+    <input id = btnlogin type="submit" value = "Login" disabled>
     <label>
     <input type="checkbox" checked="checked" name="remember"> Remember me
     </label>
@@ -34,7 +34,8 @@
     <footer><?php include 'footer.html'; ?></footer>
 
     </div>
-
+<script src="//code.jquery.com/jquery-1.12.0.min.js"></script>
+    <script src = "FormValidation/FormValidationLogin.js"></script>
     
 </body>
 </html>
