@@ -224,12 +224,13 @@ ul.annbar{
   grid-template-rows: 0.2fr 0.2fr 1fr 1fr 1fr 1fr 1fr 0.8fr;
   grid-template-areas:
     "ann ann ann ann ann ann"
-    ". nav nav nav . ."
-    ". . . . . ."
-    "add add rem rem up up"
-    "add add rem rem up up"
-    ". out out . . ."
-    ". . . . . ."
+        ". nav nav nav . ."
+        ". . . . . ."
+        "add add rem rem up up"
+        ". . . . . ."
+        ". . . . . ."
+        ". out out . . ."
+        ". . . . . ."
     "footer footer footer footer footer footer";
   grid-gap: 0.2rem;
   font-weight: 600;

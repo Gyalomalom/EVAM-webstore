@@ -14,54 +14,54 @@
     <div id="announce"><?php include 'Login-bar.php'; ?></div>
     <nav><?php include 'NavBar.html'; ?> </nav>
 
-    <div class = containeradd>
+    <div class = containeradd id = cntadd>
         <label><b>Add new product</b></label>
         <form action="Handlers/upload.php" method="post" enctype="multipart/form-data">
-            <input type = "file" name = "file">
+            <input type = "file" name = "file" id = addfile>
 
             <label for="itemname"><p>Item name:</p></label>    
-            <input type = "text" name = "itemname">
+            <input type = "text" name = "itemname" id = additemname>
 
             <label for="itemprice"><p>Item price:</p></label>    
-            <input type = "text" name = "price">
+            <input type = "text" name = "price" id = addprice>
 
             <label for="collection"><p>Item collection:</p></label>    
-            <input type = "text" name = "collection">
+            <input type = "text" name = "collection" id = addcollection>
 
-            <button type = "submit" name = "submit">Add product</button>
+            <input id = addsubmit type = "submit" name = "submit" value = "Add product" disabled>
         </form>
     </div>
-    <div class = containerremove>
+    <div class = containerremove id = cntrmv>
 
 		<label><b>Remove product</b></label>
 		<form action="Handlers/remove.php" method="post" enctype="multipart/form-data">
 		
 
             <label for="productid"><p>Product ID:</p></label>    
-            <input type = "text" name = "productid">
+            <input type = "text" name = "productid" id = removeID>
 			
-			<button type = "submit" name = "submit">Remove product</button>
+			<input id = btnremove type = "submit" name = "submit" value = "Remove product" disabled>
         </form>
     </div>
-    <div class = containerupdate>
+    <div class = containerupdate id = cntupt>
 
         <label><b>Update existing product:</b></label>
 		<form action="Handlers/update.php" method="post" enctype="multipart/form-data">
 		
 
             <label for="productid"><p>Product ID:</p></label>    
-            <input type = "text" name = "productid">
+            <input type = "text" name = "productid" id = updateID>
             
             <label for="itemname"><p>Item name:</p></label>    
-            <input type = "text" name = "itemname">
+            <input type = "text" name = "itemname" id = updatename>
 
             <label for="itemprice"><p>Item price:</p></label>    
-            <input type = "text" name = "price">
+            <input type = "text" name = "price" id = updateprice>
 
             <label for="collection"><p>Item collection:</p></label>    
-            <input type = "text" name = "collection">
+            <input type = "text" name = "collection" id = updatecollection>
 			
-			<button type = "submit" name = "submit">Update product</button>
+			<input id = btnupdate type = "submit" name = "submit" value = "Update product" disabled>
         </form>
         
 
@@ -73,6 +73,7 @@
     </div>
     <footer><?php include 'footer.html'; ?></footer>
     </div>
-    	
+<script src="//code.jquery.com/jquery-1.12.0.min.js"></script>
+    <script src = "FormValidation/FormValidationAdmin.js"></script>    	
 </body>
 </html>
