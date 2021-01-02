@@ -65,10 +65,12 @@
         </form>
         
 
-    </div>  
+    </div> 
+    <div id = logout>
     <form action = "logout.php" method = post enctype = "multipart/form-data">
     <button type = "submit" name = "logout" id="logout">Log out</button>
     </form>
+    </div>
     <footer><?php include 'footer.html'; ?></footer>
     </div>
     	
