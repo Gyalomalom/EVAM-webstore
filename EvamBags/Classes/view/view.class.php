@@ -32,9 +32,9 @@ class View extends Model {
         
     }
 
-    public function showProduct(){
+    public function showProduct($id){
 
-        return $this->getProduct();
+        return $this->getProduct($id);
         
     }
 

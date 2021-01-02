@@ -10,6 +10,6 @@ function showCustomer(str) {
       document.getElementById("txtHint").innerHTML = this.responseText;
     }
   };
-  xhttp.open("GET", "../Handlers/getproduct.php?id="+str, true);
+  xhttp.open("GET", "Handlers/getproduct.php?id="+str, true);
   xhttp.send();
 }
