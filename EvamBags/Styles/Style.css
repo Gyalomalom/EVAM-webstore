@@ -49,6 +49,7 @@ ul {
 
 ul.black li{
   float:left;
+  
 }
 
 ul.annbar li {
@@ -238,6 +239,27 @@ ul.annbar{
   font-weight: 600;
   text-transform: uppercase;
   font-size: 12px;
+}
+
+.containershop{
+
+  display: grid;
+  height: 100vh;
+  grid-template-columns: 1fr;
+  grid-template-rows: 0.2fr 0.2fr 1fr 1fr;
+  grid-template-areas:
+    "ann"
+    "nav"
+    "items"
+    "footer";
+  grid-gap: 0.2rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 12px;
+}
+
+.containeroutput{
+  grid-area: items;
 }
 
 .footer { 
@@ -668,6 +690,11 @@ footer {
   height:auto;
   grid-area: con5;
 }
+#pi1{
+  width: 50%;
+  height:auto;
+}
+
 #pi4{
     width: 90%;
     height:auto;
@@ -736,16 +763,14 @@ footer {
     margin-right: 5%;
 }
 .inlinePic{
-    margin-top: 30px;
-    margin-bottom: 30px;
-    margin-left: 5%;
-    margin-right: 5%;
-    width: 10%;
-    height: 10%;
+    
+    height: auto;
+    width: 100%;
 }   
 
 .wrapper{
     text-align: center;
+    
     
 }
 

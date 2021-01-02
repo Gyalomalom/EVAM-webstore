@@ -13,8 +13,13 @@ include 'Includes/autoload.inc.php'
 <meta name="viewport" content="width=device-width,initial-scale=1">
 </head>
 <body>
-    <?php include 'Login-bar.php'?>
-    <?php include 'NavBar.html'; ?>
+
+    <div class = 'containershop'>
+        
+    <div id="announce"><?php include 'Login-bar.php'; ?></div>
+    <nav><?php include 'NavBar.html'; ?> </nav>
+
+    <div class = 'containeroutput'>
     <?php
 				$view = new View();
                 $result = $view->showProducts();
@@ -26,7 +31,7 @@ include 'Includes/autoload.inc.php'
 				?>
     
   
- <div class = wrapper>
+    <div class = wrapper>
             <div class = inlinePic>
                 <img src = "Uploads/<?php echo $row["imagename"]; ?>" id = pi1>
             </div>
@@ -36,17 +41,19 @@ include 'Includes/autoload.inc.php'
                     <br>
                     <?php echo $row["collection"]; ?>
                     <br>
-                    <?php echo $row["price"]; ?>
+                    <?php echo "€" . $row["price"]; ?>
                     <br>
                     </p>
             </div>
-</div>
+    </div>
 	<?php
     }
     else echo "No results could be returned from the database at this time.";
 ?>
+<footer><?php include 'footer.html'; ?></footer>
 
+</div>
 
 </body>    
-<footer><?php include 'footer.html'; ?></footer>
+
 </html>
