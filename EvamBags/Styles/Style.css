@@ -917,7 +917,8 @@ button:hover {
 
 /* Slideshow container */
 .slideshow-container {
-  max-width: 1000px;
+  max-width: 100%;
+height: auto;
   position: relative;
   margin: auto;
 }
